@@ -1,5 +1,5 @@
 # Base image
-FROM node:latest
+FROM node:lts-alpine3.12
 
 # Install pm2
 RUN npm install pm2 -g
@@ -13,8 +13,9 @@ COPY package.json /usr/src/app
 RUN npm install
 
 # Copy file build to app directory
-COPY ./dist /usr/src/app
+COPY ecosystem-staging.json /usr/src/app
+COPY dist /usr/src/app/dist
 
-EXPOSE 8080
+EXPOSE 8085
 
 CMD ["pm2", "start", "ecosystem-staging.json"]
