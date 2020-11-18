@@ -47,6 +47,6 @@ jobs:
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
         key: ${{ secrets.KEY }}
-        source: "dist, ecosystem-staging.json, docker/staging.dockerfile"
+        source: "dist, package.json,ecosystem-staging.json, docker/staging.dockerfile"
         target: "app"
         rm: true
