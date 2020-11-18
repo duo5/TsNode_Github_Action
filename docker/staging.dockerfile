@@ -15,6 +15,7 @@ RUN npm install
 # Copy file build to app directory
 COPY ecosystem-staging.json /usr/src/app
 COPY dist /usr/src/app/dist
+COPY config /usr/src/app/dist/config
 
 EXPOSE 8085
 
