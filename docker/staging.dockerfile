@@ -19,4 +19,4 @@ COPY config /usr/src/app/dist/config
 
 EXPOSE 8085
 
-CMD ["pm2", "start", "ecosystem-staging.json"]
+CMD ["pm2-runtime", "start", "ecosystem-staging.json"]
