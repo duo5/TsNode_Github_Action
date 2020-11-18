@@ -8,10 +8,8 @@ on:
   schedule:
     - cron: '0 12 * * *'
 jobs:
-  build:
-
+  deploy-staging:
     runs-on: ubuntu-latest
-    
     steps:
     - uses: actions/checkout@v2
       
