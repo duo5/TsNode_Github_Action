@@ -1,0 +1,7 @@
+{
+    "name": "api document for demo app",
+    "version": "0.1.0",
+    "description": "apiDoc basic example",
+    "title": "Custom apiDoc browser title",
+    "url" : "localhost:8083/api/v1"
+  }
