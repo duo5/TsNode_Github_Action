@@ -46,7 +46,7 @@ jobs:
       # Archive build folder
     - name: Archive build folder
       run: |
-        tar -cvf deploy.tar build
+        tar -cvf deploy.tar dist
       
       # Copy build folder to server
     - name: SCP Files
@@ -58,6 +58,6 @@ jobs:
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
         key: ${{ secrets.KEY }}
-        source: "deploy.tar"
+        source: "dist"
         target: "app"
         rm: true
