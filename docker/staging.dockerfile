@@ -1,5 +1,5 @@
 # Base image
-FROM node:lts-alpine3.12
+FROM node:latest
 
 # Install pm2
 RUN npm install pm2 -g
