@@ -43,6 +43,11 @@ jobs:
     - name: Build
       run: npm run build:staging
       
+      # Archive build folder
+    - name: Archive build folder
+      run: |
+        tar -cvf deploy.tar ./build/
+      
       # Copy build folder to server
     - name: SCP Files
       # You may pin to the exact commit or the version.
@@ -53,6 +58,6 @@ jobs:
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
         key: ${{ secrets.KEY }}
-        source: "./build"
-        target: "app"
+        source: "deploy.tar"
+        target: "app/"
         rm: true
