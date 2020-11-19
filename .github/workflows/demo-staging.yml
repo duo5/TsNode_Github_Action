@@ -71,3 +71,10 @@ jobs:
 
     - name: Image digest
       run: echo ${{ steps.docker_build.outputs.digest }}
+    
+    - name: Execute SSH commmands on remote server
+      uses: JimCronqvist/action-ssh@master
+      with:
+        hosts: ${{ secrets.USERNAME }}@${{ secrets.HOST }}
+        privateKey: ${{ secrets.KEY }}
+        command: ls -a
