@@ -1,0 +1,13 @@
+{
+    "apps": [
+      {
+        "name": "demo-app",
+        "script": "./dist/index.js",
+        "merge_logs": true,
+        "env": {
+          "NODE_ENV": "production"
+        }
+      }
+    ]
+  }
+  
