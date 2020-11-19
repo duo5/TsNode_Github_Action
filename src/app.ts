@@ -28,6 +28,10 @@ app.use(session({
 ));
 app.use('/api/v1', MainRouter);
 app.use('/apidoc', express.static('public'));
+app.get('/', function (req, res, next) {
+  res.send('Welcome To Demo App');
+  next();
+});
 
 loadErrorHandlers(app);
 
