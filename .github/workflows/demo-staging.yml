@@ -64,9 +64,4 @@ jobs:
       with:
         hosts: ${{ secrets.USERNAME }}@${{ secrets.HOST }}
         privateKey: ${{ secrets.KEY }}
-        command: |
-          docker pull duonghx98/demo-app:latest
-          docker stop my-app
-          docker rm my-app
-          docker run --publish 8080:8085 -d --name my-app duonghx98/demo-app:latest
-          docker logs my-app
+        command: ./restart-service.sh
