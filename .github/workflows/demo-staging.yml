@@ -54,14 +54,14 @@ jobs:
         context: .
         file: ./docker/staging.dockerfile
         push: true
-        tags: duonghx98/demo-app:latest
+        tags: duonghx98/demo-app:v1
 
     - name: Image digest
       run: echo ${{ steps.docker_build.outputs.digest }}
     
-    - name: Run app
-      uses: JimCronqvist/action-ssh@master
-      with:
-        hosts: ${{ secrets.USERNAME }}@${{ secrets.HOST }}
-        privateKey: ${{ secrets.KEY }}
-        command: ./restart-service.sh
+#     - name: Run app
+#       uses: JimCronqvist/action-ssh@master
+#       with:
+#         hosts: ${{ secrets.USERNAME }}@${{ secrets.HOST }}
+#         privateKey: ${{ secrets.KEY }}
+#         command: ./restart-service.sh
