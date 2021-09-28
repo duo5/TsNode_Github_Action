@@ -54,7 +54,7 @@ jobs:
         context: .
         file: ./docker/staging.dockerfile
         push: true
-        tags: duonghx98/demo-app:v1
+        tags: duonghx98/demo-app:v1.1
 
     - name: Image digest
       run: echo ${{ steps.docker_build.outputs.digest }}
